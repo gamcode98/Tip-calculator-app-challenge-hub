@@ -1,0 +1,213 @@
+:root {
+  /* Colors */
+  /* Primary */
+  --StrongCyan: hsl(172, 67%, 45%);
+  /* Neutral */
+  --VeryDarkCyan: hsl(183, 100%, 15%);
+  --DarkGrayishCyanOne: hsl(186, 14%, 43%);
+  --DarkGrayishCyanTwo: hsl(184, 14%, 56%);
+  --LightGrayishCyanOne: hsl(185, 41%, 84%);
+  --LightGrayishCyanTwo: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --OrangeIvalid: hsl(25, 65%, 54%);
+}
+body {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  /*Weights: 400, 700 */
+  background-color: var(--LightGrayishCyanOne);
+  color: var(--DarkGrayishCyanOne);
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.6rem;
+  color: var(--VeryDarkCyan);
+  opacity: 0.7;
+}
+form {
+  padding: 1.5rem;
+  background-color: var(--White);
+  border-radius: 1rem;
+}
+input {
+  background-color: var(--LightGrayishCyanTwo);
+  padding: 1rem;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.input-custom {
+  text-align: right;
+  color: var(--VeryDarkCyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.bill-input-container,
+.people-input-container,
+.tip-container {
+  position: relative;
+}
+.error-msg {
+  display: block;
+  color: var(--OrangeIvalid);
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+  bottom: 5rem;
+}
+.error-mgs-tip-custom {
+  color: var(--OrangeIvalid);
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+  top: -2.5rem;
+}
+.error-msg-none {
+  display: none;
+}
+.bill-input {
+  background-image: url("./../assets/images/icon-dollar.svg");
+  background-color: var(--LightGrayishCyanTwo);
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
+  padding-left: 2rem;
+}
+.input-custom:valid {
+  border: 3px solid var(--StrongCyan);
+}
+.input-custom:invalid {
+  border: 3px solid var(--OrangeIvalid);
+}
+.info-container {
+  margin-bottom: 1.5rem;
+}
+.tip-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  border: none;
+  background-color: var(--VeryDarkCyan);
+  border-radius: 0.3rem;
+  color: var(--White);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.7;
+}
+.tip-custom::placeholder {
+  font-family: "Space Mono", monospace;
+  font-size: 1.3rem;
+  color: var(--DarkGrayishCyanOne);
+  font-weight: 700;
+  text-align: right;
+}
+.people-input {
+  background-image: url("./../assets/images/icon-person.svg");
+  background-color: var(--LightGrayishCyanTwo);
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
+  padding-left: 2rem;
+}
+.results-container {
+  background-color: var(--VeryDarkCyan);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: var(--White);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+}
+h3 {
+  text-align: right;
+  color: var(--StrongCyan);
+  font-size: 1.8rem;
+  margin: 0;
+}
+.btn-submit {
+  background-color: var(--StrongCyan);
+  color: var(--VeryDarkCyan);
+  font-weight: 700;
+  font-size: 1.2rem;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  margin-top: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.btn-submit:disabled {
+  opacity: 0.2;
+}
+.btn:hover,
+.btn-submit:hover {
+  background-color: var(--LightGrayishCyanOne);
+  color: var(--VeryDarkCyan);
+}
+.amount-tip-text,
+.total-text {
+  margin-bottom: 0;
+}
+.amount-person,
+.total-person {
+  margin-top: 0;
+  font-size: 0.8rem;
+  color: var(--DarkGrayishCyanTwo);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.btn.is-active {
+  background-color: var(--StrongCyan);
+  color: var(--VeryDarkCyan);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  form {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .tip-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .results-container {
+    min-width: 40%;
+  }
+  .input-custom {
+    font-size: 1.2rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
+}

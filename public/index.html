@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+  <h1>Spli <br> tter</h1>
+  <main>
+    <form>
+      <div class="info-container">
+        <p class="bill-text">
+          Bill
+        </p>
+        <div class="bill-input-container">
+          <input type="number" min="1" placeholder="0" required class="bill-input input-custom" id="bill-input">
+        </div>
+        <p class="tip-text">
+          Select Tip %
+        </p>
+        <div class="tip-container">
+          <button class="btn" disabled>
+            5%
+          </button>
+          <button class="btn" disabled>
+            10%
+          </button>
+          <button class="btn" disabled>
+            15%
+          </button>
+          <button class="btn" disabled>
+            25%
+          </button>
+          <button class="btn" disabled>
+            50%
+          </button>
+          <input type="number" placeholder="Custom" disabled required class="tip-custom-input input-custom" min="1"
+            id="tip-custom">
+        </div>
+
+        <p class="people-text">
+          Number of People
+        </p>
+        <div class="people-input-container">
+          <input type="number" class="people-input input-custom" min="1" placeholder="0" id="people-input">
+        </div>
+      </div>
+
+      <div class="results-container">
+        <div class="amount-container">
+          <p class="amount-tip-text">
+            Tip Amount
+          </p>
+          <p class="amount-person">
+            / person
+          </p>
+        </div>
+        <h3 id="tip-amount-value">$0.00</h3>
+        <div class="total-container">
+          <p class="total-text">
+            Total
+          </p>
+          <p class="total-person">
+            / person
+          </p>
+        </div>
+        <h3 id="total-value">$0.00</h3>
+
+        <button type="submit" class="btn-submit" id="btn-submit" disabled>RESET</button>
+
+      </div>
+
+
+    </form>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Gamcode</a>.
+  </footer>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
